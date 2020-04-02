@@ -1,0 +1,7 @@
+function throttle(fn, gapTime){
+    let lastTime = window.t_lastTime;
+    if(lastTime && new Date().getTime() - lastTime > gapTime()){ 
+        fn();
+        window.t_lastTime = new Date().getTime();
+    } 
+}
